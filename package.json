@@ -1,6 +1,6 @@
 {
   "name": "meatspace-publico",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Chat with LevelDB (the public edition)",
   "main": "main.js",
   "dependencies": {

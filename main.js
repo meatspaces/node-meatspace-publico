@@ -39,7 +39,7 @@ var Publico = function (user, options) {
       }
     }
 
-    var key = setTime() + '!' + self.user;
+    var key = uuid.v1();
 
     callback(null, {
       message: chat,
