@@ -104,7 +104,7 @@ var Publico = function (user, options) {
       media: options.media || false,
       ttl: ttl,
       created: created
-    }, function (err) {
+    }, { ttl: ttl }, function (err) {
       if (err) {
         callback(err);
       } else {
