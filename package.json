@@ -1,13 +1,14 @@
 {
-  "name": "meatspace-parallax",
-  "version": "0.1.0",
-  "description": "Chat with LevelDB",
+  "name": "meatspace-publico",
+  "version": "0.0.1",
+  "description": "Chat with LevelDB (the public edition)",
   "main": "main.js",
   "dependencies": {
     "level": ">= 0.10.0",
     "level-sublevel": "4.8.0",
     "leveldown": ">= 0.6.1",
-    "level-ttl": "*"
+    "level-ttl": "*",
+    "uuid": ">= 1.4.1"
   },
   "devDependencies": {
     "mocha": ">= 1.9.0",
@@ -18,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/meatspaces/node-meatspace-parallax.git"
+    "url": "git://github.com/meatspaces/node-meatspace-publico.git"
   },
   "keywords": ["leveldb", "chat", "ttl", "ephemeral"],
   "author": "Edna Piranha <jen@ednapiranha.com> (http://ednapiranha.com)",
