@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+* Major refactor
+
 ## 0.0.3
 
 * Fix TTL

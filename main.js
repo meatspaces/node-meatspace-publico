@@ -43,6 +43,7 @@ var Publico = function (user, options) {
 
     callback(null, {
       message: chat,
+      fingerprint: options.fingerprint || '',
       media: options.media || false,
       ttl: ttl,
       key: key,
@@ -100,6 +101,7 @@ var Publico = function (user, options) {
     var key = uuid.v1();
 
     self.db.put(key, {
+      fingerprint: options.fingerprint || '',
       message: chat,
       media: options.media || false,
       ttl: ttl,

@@ -1,11 +1,11 @@
 {
   "name": "meatspace-publico",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Chat with LevelDB (the public edition)",
   "main": "main.js",
   "dependencies": {
     "level": ">= 0.10.0",
-    "level-sublevel": "4.8.0",
+    "level-sublevel": ">= 4.8.0",
     "leveldown": ">= 0.6.1",
     "level-ttl": "*",
     "uuid": ">= 1.4.1"
