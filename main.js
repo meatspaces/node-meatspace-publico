@@ -39,7 +39,7 @@ var Publico = function (user, options) {
       }
     }
 
-    var key = uuid.v1();
+    var key = uuid.v4();
 
     callback(null, {
       message: chat,
@@ -98,7 +98,7 @@ var Publico = function (user, options) {
     }
 
     var created = setTime();
-    var key = uuid.v1();
+    var key = uuid.v4();
 
     self.db.put(key, {
       fingerprint: options.fingerprint || '',
