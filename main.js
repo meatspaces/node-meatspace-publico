@@ -67,14 +67,12 @@ var Publico = function (user, options) {
     });
 
     rs.pipe(concat(function (chats) {
-
       callback(null, {
         chats: chats
       });
     }));
 
     rs.on('error', function (err) {
-
       callback(err);
     });
   };
