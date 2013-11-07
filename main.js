@@ -93,7 +93,7 @@ var Publico = function (user, options) {
     }
 
     var created = setTime();
-    var key = setTime + '!' + uuid.v4();
+    var key = setTime() + '!' + uuid.v4();
 
     self.db.put(key, {
       fingerprint: options.fingerprint || '',
