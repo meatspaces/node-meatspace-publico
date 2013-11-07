@@ -4,6 +4,7 @@ var level = require('level');
 var ttl = require('level-ttl');
 var uuid = require('uuid');
 var Sublevel = require('level-sublevel');
+var concat = require('concat-stream');
 
 var Publico = function (user, options) {
   var self = this;
@@ -39,8 +40,6 @@ var Publico = function (user, options) {
       }
     }
 
-    var key = uuid.v4();
-
     callback(null, {
       message: chat,
       fingerprint: options.fingerprint || '',
@@ -62,23 +61,21 @@ var Publico = function (user, options) {
   };
 
   this.getChats = function (reverse, callback) {
-    var chats = [];
-
-    self.db.createReadStream({
+    var rs = self.db.createReadStream({
       limit: self.limit,
       reverse: reverse
+    });
 
-    }).on('data', function (data) {
-
-      chats.push(data);
-    }).on('error', function (err) {
-
-      callback(err);
-    }).on('end', function () {
+    rs.pipe(concat(function (chats) {
 
       callback(null, {
         chats: chats
       });
+    }));
+
+    rs.on('error', function (err) {
+
+      callback(err);
     });
   };
 
@@ -98,7 +95,7 @@ var Publico = function (user, options) {
     }
 
     var created = setTime();
-    var key = uuid.v4();
+    var key = setTime + '!' + uuid.v4();
 
     self.db.put(key, {
       fingerprint: options.fingerprint || '',
