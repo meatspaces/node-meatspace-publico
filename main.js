@@ -44,6 +44,7 @@ var Publico = function (user, options) {
       message: chat,
       fingerprint: options.fingerprint || '',
       media: options.media || false,
+      owner: options.owner || false,
       ttl: ttl,
       key: key,
       created: created
@@ -99,6 +100,7 @@ var Publico = function (user, options) {
       fingerprint: options.fingerprint || '',
       message: chat,
       media: options.media || false,
+      owner: options.owner || false,
       ttl: ttl,
       created: created
     }, { ttl: ttl }, function (err) {
