@@ -31,14 +31,14 @@ describe('publico', function () {
     });
 
     it('should add a new chat that is destroyed after 1 second from retrieval', function (done) {
-      p.addChat('test message with ttl', { ttl: 1000 }, function (err, c) {
+      p.addChat('test message with ttl', { ttl: 100 }, function (err, c) {
         console.log('test message with ttl ', c)
         setTimeout(function () {
           p.getChat(c.key, function (err, c1) {
             should.not.exist(c1);
             done();
           });
-        }, 2500);
+        }, 1500);
       });
     });
   });

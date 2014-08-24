@@ -1,19 +1,18 @@
 {
   "name": "meatspace-publico",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Chat with LevelDB (the public edition)",
   "main": "main.js",
   "dependencies": {
-    "level": ">= 0.10.0",
-    "level-sublevel": ">= 4.8.0",
-    "leveldown": ">= 0.6.1",
-    "level-ttl": "*",
-    "uuid": ">= 1.4.1",
-    "concat-stream": ">= 1.1.0"
+    "level": "~0.18.0",
+    "level-sublevel": "~6.3.1",
+    "level-ttl": "~1.0.1",
+    "uuid": "~1.4.1",
+    "concat-stream": "~1.4.6"
   },
   "devDependencies": {
-    "mocha": ">= 1.9.0",
-    "should": ">= 1.2.2"
+    "mocha": "~1.21.4",
+    "should": "~4.0.4"
   },
   "scripts": {
     "test": "make test"

@@ -95,7 +95,7 @@ var Publico = function (user, options) {
 
     var created = setTime();
     var key = setTime() + '!' + uuid.v4();
-
+    console.log('*** setting ttl ', ttl)
     self.db.put(key, {
       fingerprint: options.fingerprint || '',
       message: chat,
