@@ -65,7 +65,7 @@ var Publico = function (user, options) {
     var rs = self.db.createReadStream({
       limit: self.limit,
       reverse: reverse,
-      start: key || false
+      start: key || '\x00'
     });
 
     rs.pipe(concat(function (chats) {
