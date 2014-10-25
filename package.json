@@ -1,6 +1,6 @@
 {
   "name": "meatspace-publico",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Chat with LevelDB (the public edition)",
   "main": "main.js",
   "dependencies": {
@@ -15,7 +15,7 @@
     "should": "~4.0.4"
   },
   "scripts": {
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",

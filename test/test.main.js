@@ -23,7 +23,7 @@ describe('publico', function () {
         should.exist(c);
         c.message.should.eql('test message');
 
-        p.getChats(false, function (err, c) {
+        p.getChats(false, false, function (err, c) {
           c.chats.length.should.equal(1);
           done();
         });

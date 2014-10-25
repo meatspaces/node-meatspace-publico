@@ -28,13 +28,15 @@ Once the chat has been created, the TTL will start.
 
 ### Get all chats
 
-    publico.getChats(<reverse>, function (err, c) {
+    publico.getChats(<reverse>, <key>, function (err, c) {
       if (!err) {
         console.log(c);
       }
     });
 
 `reverse` is an optional boolean to reverse the chat history from latest -> earliest. Defaults at earliest -> latest.
+
+`key` is a the point in which you want to grab data from - set to false if you want everything.
 
 ## Tests
 

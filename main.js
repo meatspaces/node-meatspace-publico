@@ -13,7 +13,7 @@ var Publico = function (user, options) {
   var CHAT_TTL_LONG = 259200000; // 3 days
 
   var setTime = function () {
-    return Date.now();
+    return Math.floor(Date.now() / 1000);
   };
 
   if (!options) {
@@ -61,10 +61,11 @@ var Publico = function (user, options) {
     });
   };
 
-  this.getChats = function (reverse, callback) {
+  this.getChats = function (reverse, key, callback) {
     var rs = self.db.createReadStream({
       limit: self.limit,
-      reverse: reverse
+      reverse: reverse,
+      start: key || false
     });
 
     rs.pipe(concat(function (chats) {
