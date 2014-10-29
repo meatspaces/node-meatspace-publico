@@ -13,7 +13,7 @@ var Publico = function (user, options) {
   var CHAT_TTL_LONG = 259200000; // 3 days
 
   var setTime = function () {
-    return Math.floor(Date.now() / 1000);
+    return Date.now();
   };
 
   if (!options) {
